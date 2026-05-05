@@ -1,0 +1,60 @@
+{
+    "works" : [ 
+        {
+            "name": "Appartement Tétouan",
+            "images": ["./images/works/appartement-tetouane/img1.jpeg","./images/works/appartement-tetouane/img2.jpeg","./images/works/appartement-tetouane/img3.jpeg","./images/works/appartement-tetouane/img4.jpeg"],
+            "lieu": "Tétouan"
+        },
+        {
+            "name": "Appartement Tanger",
+            "images": ["./images/works/appartement-tanger/img1.jpeg","./images/works/appartement-tanger/img2.jpeg","./images/works/appartement-tanger/img4.jpeg","./images/works/appartement-tanger/img5.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Boutique des fleurs",
+            "images": ["./images/works/boutiques-fleurs/img1.jpeg","./images/works/boutiques-fleurs/img2.jpeg","./images/works/boutiques-fleurs/img3.jpeg","./images/works/boutiques-fleurs/img4.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Coffee shop Hôtel",
+            "images": ["./images/works/coffee-shop/img1.jpeg","./images/works/coffee-shop/img2.jpeg","./images/works/coffee-shop/img3.jpeg","./images/works/coffee-shop/img4.jpeg","./images/works/coffee-shop/img5.jpeg","./images/works/coffee-shop/img6.jpeg","./images/works/coffee-shop/img7.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Appart hôtel el campo star",
+            "images": ["./images/works/elcampo-star/img1.jpeg","./images/works/elcampo-star/img2.jpeg","./images/works/elcampo-star/img3.jpeg","./images/works/elcampo-star/img4.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Façade R+3",
+            "images": ["./images/works/facade/img1.jpeg","./images/works/facade/img2.jpeg","./images/works/facade/img3.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Réception hôtel Movinpik",
+            "images": ["./images/works/hotel-movinpik/img1.jpeg","./images/works/hotel-movinpik/img2.jpeg","./images/works/hotel-movinpik/img3.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Restaurant marocain",
+            "images": ["./images/works/restaurant-marocain/img1.jpeg","./images/works/restaurant-marocain/img2.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Salle de fête",
+            "images": ["./images/works/salle-fete/img1.jpeg","./images/works/salle-fete/img3.jpeg","./images/works/salle-fete/img4.jpeg","./images/works/salle-fete/img5.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Terrasse d'entreprise Belgique",
+            "images": ["./images/works/terrasse-entreprise/img1.jpeg","./images/works/terrasse-entreprise/img2.jpeg","./images/works/terrasse-entreprise/img3.jpeg"],
+            "lieu": "Tanger"
+        },
+        {
+            "name": "Villa Menar",
+            "images": ["./images/works/vila-menar/img1.jpeg","./images/works/vila-menar/img2.jpeg","./images/works/vila-menar/img3.jpeg","./images/works/vila-menar/img4.jpeg","./images/works/vila-menar/img5.jpeg","./images/works/vila-menar/img6.jpeg","./images/works/vila-menar/img7.jpeg","./images/works/vila-menar/img8.jpeg"],
+            "lieu": "Tanger"
+        }
+    ]
+}
+  

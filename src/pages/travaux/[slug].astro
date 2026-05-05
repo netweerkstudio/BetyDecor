@@ -1,0 +1,90 @@
+---
+import '../../styles/global.css';
+import Navbar from '../../components/Navbar';
+import WhatsappButton from '../../components/WhatsappButton';
+import Footer from '../../components/Footer';
+import worksData from '../../Data/Works.json';
+
+export function getStaticPaths() {
+  return worksData.works.map((project) => {
+    const slug = project.name
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')  // strip accents
+      .replace(/[^a-z0-9]+/g, '-')       // spaces/specials → dash
+      .replace(/^-+|-+$/g, '');          // trim leading/trailing dashes
+
+    return { params: { slug }, props: { project } };
+  });
+}
+
+const { project } = Astro.props;
+const resolveImg = (path) => path.replace(/^\.\//, '/');
+
+// Neighbours for prev/next navigation
+const allWorks = worksData.works;
+const currentIdx = allWorks.findIndex(w => w.name === project.name);
+const toSlug = (name) =>
+  name.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+const prevProject = allWorks[(currentIdx - 1 + allWorks.length) % allWorks.length];
+const nextProject = allWorks[(currentIdx + 1) % allWorks.length];
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={`${project.name} – Projet BetyDecor à ${project.lieu}`} />
+    <title>{project.name} – BetyDecor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
+  </head>
+  <body>
+    <WhatsappButton client:load />
+    <Navbar client:load />
+
+    <div class="Details">
+      <div class="detailsContainer">
+        <a class="detailsBack" href="/#work">
+          <i class="fa-solid fa-arrow-left"></i> Nos Travaux
+        </a>
+
+        <div class="title">Détails</div>
+
+        <div class="detailsHeader">
+          <div class="card">
+            <h2>Projet</h2>
+            <h3>{project.name}</h3>
+          </div>
+          <div class="card">
+            <h2>Lieu</h2>
+            <h3>{project.lieu}</h3>
+          </div>
+        </div>
+
+        <div class="garelly">
+          {project.images.map((image, index) => (
+            <div class={`card ${(index === 1 || index === 2 || index === 5 || index === 6) ? 'active' : ''}`}>
+              <img src={resolveImg(image)} alt={`${project.name} – photo ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
+            </div>
+          ))}
+        </div>
+
+        <!-- Prev / Next navigation -->
+        <nav class="detailsNav">
+          <a href={`/travaux/${toSlug(prevProject.name)}`} class="navBtn">
+            <i class="fa-solid fa-arrow-left"></i> {prevProject.name}
+          </a>
+          <a href={`/travaux/${toSlug(nextProject.name)}`} class="navBtn">
+            {nextProject.name} <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <Footer client:load />
+  </body>
+</html>

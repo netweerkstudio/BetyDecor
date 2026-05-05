@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar';
+import WhatsappButton from '../components/WhatsappButton';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Work from '../components/Work';
+import Services from '../components/Services';
+import Reviews from '../components/Reviews';
+import Faqs from '../components/Faqs';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="BetyDecor – Agence de design d'intérieur à Tanger, Maroc. Transformez votre espace avec nos services de plan 2D, visualisation 3D, réalisation des travaux et suivi de chantier." />
+    <title>BetyDecor – Design d'intérieur à Tanger</title>
+    <meta property="og:title" content="BetyDecor – Design d'intérieur à Tanger" />
+    <meta property="og:description" content="BetyDecor – Agence de design d'intérieur à Tanger, Maroc. Transformez votre espace avec nos services de plan 2D, visualisation 3D, réalisation des travaux et suivi de chantier." />
+    <meta property="og:image" content="https://betydecor.com/images/salon.jpeg" />
+    <meta property="og:url" content="https://betydecor.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BetyDecor" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
+  </head>
+  <body>
+    <div class="Home">
+      <WhatsappButton client:load />
+      <Navbar client:load />
+      <Hero client:load />
+      <About client:load />
+      <Work client:load />
+      <Services client:load />
+      <Reviews client:load />
+      <Faqs client:load />
+      <Contact client:load />
+      <Footer client:load />
+    </div>
+  </body>
+</html>

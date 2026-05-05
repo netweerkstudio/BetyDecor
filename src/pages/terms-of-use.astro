@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar';
+import WhatsappButton from '../components/WhatsappButton';
+import Footer from '../components/Footer';
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conditions d'utilisation de BetyDecor." />
+    <title>Conditions d'utilisation – BetyDecor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
+  </head>
+  <body>
+    <WhatsappButton client:load />
+    <Navbar client:load />
+    <div class="TermsOfUse">
+      <div class="TermsOfUseContainer">
+        <div class="TermsOfUseHeader">
+          <h1 class="title">Conditions d'utilisation</h1>
+          <p>Dernière mise à jour : 19/06/2024</p>
+        </div>
+        <div class="TermsOfUseContent">
+          <p>BetyDecor ("BetyDecor", "nous", "notre", "nôtre") vous fournit ce site Web et les services connexes (collectivement, les "Services") sous réserve des présentes conditions d'utilisation ("Conditions"). En accédant ou en utilisant les Services, vous acceptez d'être lié par ces Conditions.</p>
+          <h2>Restrictions d'utilisation</h2>
+          <p>Vous n'êtes pas autorisé à utiliser les Services à des fins illégales ou nuisibles. Vous n'êtes pas autorisé à utiliser les Services d'une manière qui pourrait endommager, désactiver, surcharger ou altérer les Services ou interférer avec l'utilisation des Services par d'autres personnes.</p>
+          <h2>Propriété intellectuelle</h2>
+          <p>Les Services et tout le contenu et les informations disponibles sur ou via les Services sont la propriété de BetyDecor ou de ses concédants de licence et sont protégés par les lois sur le droit d'auteur, les marques de commerce et autres lois sur la propriété intellectuelle.</p>
+          <h2>Général</h2>
+          <p>Ces Conditions constituent l'intégralité de l'accord entre vous et BetyDecor concernant les Services et remplacent toutes les communications, accords ou ententes antérieurs.</p>
+        </div>
+      </div>
+    </div>
+    <Footer client:load />
+  </body>
+</html>
