@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 
 const isBuild = process.argv.includes('build');
 
@@ -13,6 +14,7 @@ if (isBuild) {
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
+  site: 'https://betydecor.com',
+  integrations: [react(), sitemap()],
   ...adapterConfig
 });
