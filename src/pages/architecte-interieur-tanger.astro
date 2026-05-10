@@ -1,62 +1,45 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar';
-import WhatsappButton from '../components/WhatsappButton';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Vous cherchez un architecte d'intérieur à Tanger ? BetyDecor transforme vos espaces résidentiels et commerciaux avec créativité et expertise. Demandez un devis gratuit." />
-    <meta name="keywords" content="architecte d'intérieur Tanger, BetyDecor, architecture Tanger, aménagement intérieur" />
-    <title>Architecte d'Intérieur à Tanger | BetyDecor</title>
-    <meta property="og:title" content="Architecte d'Intérieur à Tanger | BetyDecor" />
-    <meta property="og:description" content="Vous cherchez un architecte d'intérieur à Tanger ? BetyDecor transforme vos espaces résidentiels et commerciaux avec créativité et expertise. Demandez un devis gratuit." />
-    <meta property="og:image" content="https://betydecor.com/images/salon.jpg" />
-    <meta property="og:url" content="https://betydecor.com/architecte-interieur-tanger" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="BetyDecor" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
-  </head>
-  <body>
-    <WhatsappButton client:load />
-    <Navbar client:load />
-
-    <div class="SeoHero" style="background: linear-gradient(to right, rgba(31,31,31,0.9), rgba(31,31,31,0.6)), url('/images/salon.jpg') no-repeat center center / cover;">
-      <div class="SeoHeroContainer animate">
-        <h1>Votre Architecte d'Intérieur à Tanger</h1>
-        <p>Chez BetyDecor, nous mettons notre expertise d'architecte d'intérieur au service de vos projets à Tanger. Que ce soit pour une villa, un appartement ou un espace professionnel, nous concevons des intérieurs uniques qui reflètent votre personnalité tout en optimisant l'espace.</p>
-        <div class="button">
-          <a href="#contact">Demander un devis</a>
-        </div>
+<BaseLayout
+  title="Architecte d'Intérieur à Tanger | BetyDecor"
+  description="Vous cherchez un architecte d'intérieur à Tanger ? BetyDecor transforme vos espaces résidentiels et commerciaux avec créativité et expertise. Demandez un devis gratuit."
+  keywords="architecte d'intérieur Tanger, BetyDecor, architecture Tanger, aménagement intérieur"
+  image="https://betydecor.com/images/salon.jpg"
+  url="https://betydecor.com/architecte-interieur-tanger"
+  type="website"
+>
+  <div class="SeoHero" style="background: linear-gradient(to right, rgba(31,31,31,0.9), rgba(31,31,31,0.6)), url('/images/salon.jpg') no-repeat center center / cover;">
+    <div class="SeoHeroContainer animate">
+      <h1>Votre Architecte d'Intérieur à Tanger</h1>
+      <p>Chez BetyDecor, nous mettons notre expertise d'architecte d'intérieur au service de vos projets à Tanger. Que ce soit pour une villa, un appartement ou un espace professionnel, nous concevons des intérieurs uniques qui reflètent votre personnalité tout en optimisant l'espace.</p>
+      <div class="button">
+        <a href="#contact">Demander un devis</a>
       </div>
     </div>
+  </div>
 
-    <div class="SeoContent">
-      <div class="SeoContentContainer animate">
-        <div class="textContent">
-          <h2 class="title">Pourquoi choisir BetyDecor pour votre projet d'architecture à Tanger ?</h2>
-          <p>
-            Nous sommes fiers de contribuer à l'embellissement de la ville de Tanger à travers nos projets. Notre connaissance du marché local, des artisans et du climat de la région nous permet de vous proposer des solutions architecturales parfaites.
-          </p>
-          <ul>
-            <li><i class="fa-solid fa-check"></i> Conception sur-mesure et plans 2D/3D détaillés</li>
-            <li><i class="fa-solid fa-check"></i> Optimisation des volumes et de la lumière naturelle</li>
-            <li><i class="fa-solid fa-check"></i> Accompagnement dans le choix rigoureux des matériaux</li>
-            <li><i class="fa-solid fa-check"></i> Pilotage et suivi de chantier de A à Z à Tanger</li>
-          </ul>
-        </div>
-        <div class="imageContent">
-          <img src="/images/salon.jpg" alt="Architecte d'intérieur Tanger" />
-        </div>
+  <div class="SeoContent">
+    <div class="SeoContentContainer animate">
+      <div class="textContent">
+        <h2 class="title">Pourquoi choisir BetyDecor pour votre projet d'architecture à Tanger ?</h2>
+        <p>
+          Nous sommes fiers de contribuer à l'embellissement de la ville de Tanger à travers nos projets. Notre connaissance du marché local, des artisans et du climat de la région nous permet de vous proposer des solutions architecturales parfaites.
+        </p>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Conception sur-mesure et plans 2D/3D détaillés</li>
+          <li><i class="fa-solid fa-check"></i> Optimisation des volumes et de la lumière naturelle</li>
+          <li><i class="fa-solid fa-check"></i> Accompagnement dans le choix rigoureux des matériaux</li>
+          <li><i class="fa-solid fa-check"></i> Pilotage et suivi de chantier de A à Z à Tanger</li>
+        </ul>
+      </div>
+      <div class="imageContent">
+        <img src="/images/salon.jpg" alt="Architecte d'intérieur Tanger" />
       </div>
     </div>
+  </div>
 
-    <Contact client:load />
-    <Footer client:load />
-  </body>
-</html>
+  <Contact client:load />
+</BaseLayout>

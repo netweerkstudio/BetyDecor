@@ -1,39 +1,26 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar';
-import WhatsappButton from '../components/WhatsappButton';
-import Footer from '../components/Footer';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Politique de confidentialité de BetyDecor." />
-    <title>Politique de confidentialité – BetyDecor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
-  </head>
-  <body>
-    <WhatsappButton client:load />
-    <Navbar client:load />
-    <div class="PrivacyPolicy">
-      <div class="PrivacyPolicyContainer">
-        <div class="PrivacyPolicyHeader">
-          <h1 class="title">politique de confidentialité</h1>
-          <p>Dernière mise à jour : 19/06/2024</p>
-        </div>
-        <div class="PrivacyPolicyContent">
-          <p>Chez BetyDecor, nous respectons votre vie privée et nous nous engageons à protéger vos informations personnelles. Voici quelques détails supplémentaires sur notre politique de confidentialité :</p>
-          <h2>Collecte d'informations personnelles</h2>
-          <p>Chez BetyDecor, nous respectons votre vie privée et nous nous engageons à protéger vos informations personnelles. Voici quelques détails supplémentaires sur notre politique de confidentialité :</p>
-          <h2>Utilisation des informations personnelles</h2>
-          <p>Nous utilisons vos informations personnelles pour répondre à votre message et vous fournir les informations ou services que vous avez demandés. Nous pouvons également utiliser vos informations personnelles pour vous envoyer des informations marketing, mais uniquement avec votre consentement.</p>
-          <h2>Modifications de cette politique de confidentialité</h2>
-          <p>Nous pouvons modifier cette politique de confidentialité de temps à autre. Nous vous informerons de toute modification en publiant la politique de confidentialité révisée sur notre site Web.</p>
-        </div>
+<BaseLayout
+  title="Politique de confidentialité – BetyDecor"
+  description="Politique de confidentialité de BetyDecor."
+>
+  <div class="PrivacyPolicy">
+    <div class="PrivacyPolicyContainer">
+      <div class="PrivacyPolicyHeader">
+        <h1 class="title">politique de confidentialité</h1>
+        <p>Dernière mise à jour : 19/06/2024</p>
+      </div>
+      <div class="PrivacyPolicyContent">
+        <p>Chez BetyDecor, nous respectons votre vie privée et nous nous engageons à protéger vos informations personnelles. Voici quelques détails supplémentaires sur notre politique de confidentialité :</p>
+        <h2>Collecte d'informations personnelles</h2>
+        <p>Chez BetyDecor, nous respectons votre vie privée et nous nous engageons à protéger vos informations personnelles. Voici quelques détails supplémentaires sur notre politique de confidentialité :</p>
+        <h2>Utilisation des informations personnelles</h2>
+        <p>Nous utilisons vos informations personnelles pour répondre à votre message et vous fournir les informations ou services que vous avez demandés. Nous pouvons également utiliser vos informations personnelles pour vous envoyer des informations marketing, mais uniquement avec votre consentement.</p>
+        <h2>Modifications de cette politique de confidentialité</h2>
+        <p>Nous pouvons modifier cette politique de confidentialité de temps à autre. Nous vous informerons de toute modification en publiant la politique de confidentialité révisée sur notre site Web.</p>
       </div>
     </div>
-    <Footer client:load />
-  </body>
-</html>
+  </div>
+</BaseLayout>

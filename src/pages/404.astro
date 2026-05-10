@@ -1,22 +1,17 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 – BetyDecor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
-  </head>
-  <body>
-    <div class="not-found">
-      <div class="not-found-container">
-        <h1>404 Page non trouvée</h1>
-        <p>Désolé, la page que vous recherchez n'existe pas.</p>
-        <div class="button"><a href="/">Retourner à l'accueil</a></div>
-      </div>
+<BaseLayout
+  title="404 – BetyDecor"
+  showNavbar={false}
+  showFooter={false}
+>
+  <div class="not-found">
+    <div class="not-found-container">
+      <h1>404 Page non trouvée</h1>
+      <p>Désolé, la page que vous recherchez n'existe pas.</p>
+      <div class="button"><a href="/">Retourner à l'accueil</a></div>
     </div>
-  </body>
-</html>
+  </div>
+</BaseLayout>

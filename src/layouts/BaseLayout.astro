@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar';
+import WhatsappButton from '../components/WhatsappButton';
+import Footer from '../components/Footer';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  keywords?: string;
+  showFooter?: boolean;
+  showNavbar?: boolean;
+}
+
+const {
+  title,
+  description,
+  image,
+  url,
+  type,
+  keywords,
+  showFooter = true,
+  showNavbar = true
+} = Astro.props;
+---
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {description && <meta name="description" content={description} />}
+    {keywords && <meta name="keywords" content={keywords} />}
+    <title>{title}</title>
+    {title && <meta property="og:title" content={title} />}
+    {description && <meta property="og:description" content={description} />}
+    {image && <meta property="og:image" content={image} />}
+    {url && <meta property="og:url" content={url} />}
+    {type && <meta property="og:type" content={type} />}
+    <meta property="og:site_name" content="BetyDecor" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="icon" type="image/png" href="/logo/BetyDecor-Logo-Transparent.png" />
+  </head>
+  <body>
+    {showNavbar && <WhatsappButton client:load />}
+    {showNavbar && <Navbar client:load />}
+    <slot />
+    {showFooter && <Footer client:load />}
+  </body>
+</html>
