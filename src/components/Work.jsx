@@ -53,28 +53,34 @@ function Work({ workId }) {
       <h1 className="title">Nos Travaux</h1>
       <div className={workTop < scrollPosition + 400 ? 'WorkContainer animate' : 'WorkContainer'}>
         <div className="cards">
-          {displayed.map((project, index) => (
-            <div
-              key={index}
-              className={`card ${index === 1 ? 'active' : ''}`}
-              style={{
-                background: `url(${resolveImg(project.images[0])}) no-repeat center / cover,
-                  ${index === 1 ? 'linear-gradient(to top, rgba(0,0,0,70%), rgba(0,0,0,0))' : 'rgba(0,0,0,70%)'}`,
-              }}
-              onClick={next}
-            >
-              <div className="cardContent">
-                <h3>{project.name}</h3>
-                <div className="button">
-                  {index === 1 && (
-                    <a href={`/travaux/${toSlug(project.name)}`}>
-                      Afficher les détails <i className="fa-solid fa-arrow-right"></i>
-                    </a>
-                  )}
+          {displayed.map((project, index) => {
+            const isCenter = index === 1;
+            const CardTag = isCenter ? 'a' : 'div';
+            return (
+              <CardTag
+                key={index}
+                href={isCenter ? `/travaux/${toSlug(project.name)}` : undefined}
+                className={`card ${isCenter ? 'active' : ''}`}
+                style={{
+                  textDecoration: 'none',
+                  background: `url(${resolveImg(project.images[0])}) no-repeat center / cover,
+                    ${isCenter ? 'linear-gradient(to top, rgba(0,0,0,70%), rgba(0,0,0,0))' : 'rgba(0,0,0,70%)'}`,
+                }}
+                onClick={isCenter ? undefined : next}
+              >
+                <div className="cardContent">
+                  <h3>{project.name}</h3>
+                  <div className="button">
+                    {isCenter && (
+                      <span className="fake-btn">
+                        Afficher les détails <i className="fa-solid fa-arrow-right"></i>
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              </CardTag>
+            );
+          })}
         </div>
       </div>
       <Swipper next={next} back={back} imageIndex={projectIndex} bgImages={worksData.works} />
