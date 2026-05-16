@@ -25,6 +25,8 @@ const {
   showFooter = true,
   showNavbar = true
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 ---
 
 <html lang="fr">
@@ -33,6 +35,7 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {description && <meta name="description" content={description} />}
     {keywords && <meta name="keywords" content={keywords} />}
+    <link rel="canonical" href={canonicalUrl} />
     <title>{title}</title>
     {title && <meta property="og:title" content={title} />}
     {description && <meta property="og:description" content={description} />}

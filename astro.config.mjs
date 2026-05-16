@@ -14,7 +14,7 @@ if (isBuild) {
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://betydecor.com',
+  site: 'https://www.betydecor.com',
   integrations: [react(), sitemap()],
   ...adapterConfig
 });
